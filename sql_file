@@ -1,0 +1,39 @@
+create database assignment;
+
+use assignment;
+
+create table Transaction (
+Check_no varchar(10),
+Company_id char,
+Date date,
+Amount int
+);
+
+insert into Transaction values('SBl1234','B', '2020-01-18', 19877);
+
+insert into Transaction values('AXiS2476','D', '2020-05-23', 20876);
+
+insert into Transaction values('HDFC7612','B', '2020-09-09', 45261);
+
+insert into Transaction values('ICICI1010','E', '2020-12-12', 10298);
+
+SELECT * FROM TRANSACTION;
+
+create table Company (
+Company_id char,
+Company_name varchar(25)
+);
+
+insert into Company values('A','Hyundai');
+
+insert into Company values('B','Toyota');
+
+insert into Company values('C','Tata');
+
+insert into Company values('E','Ford');
+
+insert into Company values('F','Maruti');
+
+select * from Company;
+
+select * from TRANSACTION INNER JOIN Company ON Company.Company_id =TRANSACTION.Company_id;
